@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MessageActivity">
+    <!--
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/profile_image"/>
+                    -->
+
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/recycler_view"
+            android:layout_below="@+id/fragment_container"
+            android:layout_above="@+id/bottom"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:padding="5dp"
+            android:id="@+id/bottom"
+            android:layout_gravity="bottom"
+            android:background="#fff"
+            android:layout_height="wrap_content">
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/text_send"
+                android:layout_toLeftOf="@+id/btn_send"
+                android:layout_centerVertical="true"
+                android:padding="8dp"
+                android:background="@drawable/message_et_bg"
+                android:hint="Type a message..."/>
+
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_margin="8dp"
+                android:rotation="-45"
+                android:paddingLeft="4dp"
+                android:src="@drawable/ic_send_message"
+                android:background="@drawable/send_message_et_bg"
+                android:id="@+id/btn_send"
+                android:layout_alignParentRight="true"
+                />
+
+        </RelativeLayout>
+    </FrameLayout>
+</RelativeLayout>
